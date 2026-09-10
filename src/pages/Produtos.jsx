@@ -46,7 +46,7 @@ function Produtos() {
           />
         </div>
 
-        <div className="table-wrapper">
+        <div className="table-wrapper responsive-table">
           <table>
             <caption>Lista de produtos cadastrados</caption>
             <thead>
@@ -61,11 +61,11 @@ function Produtos() {
             <tbody>
               {produtos.map((produto) => (
                 <tr key={produto.id}>
-                  <td>{produto.codigo}</td>
-                  <td>{produto.nome}</td>
-                  <td>{produto.categoria}</td>
-                  <td>{produto.quantidade}</td>
-                  <td>{produto.preco}</td>
+                  <td data-label="Código">{produto.codigo}</td>
+                  <td data-label="Produto">{produto.nome}</td>
+                  <td data-label="Categoria">{produto.categoria}</td>
+                  <td data-label="Quantidade">{produto.quantidade}</td>
+                  <td data-label="Preço">{produto.preco}</td>
                 </tr>
               ))}
             </tbody>

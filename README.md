@@ -39,23 +39,21 @@ Desenvolver uma aplicação Web que permita cadastrar e consultar produtos, regi
 - identificar produtos com estoque baixo;
 - organizar produtos por categoria.
 
-## Funcionalidades implementadas na Etapa 02
+## Funcionalidades implementadas até a Etapa 03
 
-Nesta etapa foi criado o primeiro protótipo estrutural da interface.
-
-Foram implementadas:
-
-- navegação entre as interfaces;
+- navegação entre Dashboard, Produtos e Movimentações;
 - dashboard com informações representativas do estoque;
-- tabela de produtos;
+- listagem de produtos;
 - formulário de cadastro de produto;
 - formulário de movimentação de estoque;
 - listagem de movimentações de exemplo;
-- uso de elementos HTML semânticos.
+- estrutura com HTML semântico por meio de JSX;
+- interface responsiva para desktop, tablet e smartphone;
+- adaptação de cards, formulários, menu e tabelas para telas menores.
 
-Os dados exibidos são apenas exemplos. Nesta etapa ainda não existe persistência, API ou banco de dados conectado à interface.
+Os dados exibidos ainda são exemplos. Nesta etapa não existe persistência, API ou banco de dados conectado à interface.
 
-## Páginas criadas
+## Interfaces
 
 ### Dashboard
 
@@ -63,11 +61,24 @@ Apresenta uma visão geral do sistema e uma lista representativa de produtos com
 
 ### Produtos
 
-Apresenta a listagem dos produtos e um formulário de cadastro.
+Apresenta a listagem dos produtos, campo de pesquisa e formulário de cadastro.
 
 ### Movimentações
 
 Apresenta um formulário para registrar entradas e saídas e uma lista representativa das últimas movimentações.
+
+## Responsividade
+
+A Etapa 03 utiliza dois breakpoints principais:
+
+- até `900px`, para tablets e telas intermediárias;
+- até `600px`, para smartphones.
+
+Foram utilizados Flexbox, CSS Grid e media queries. Em smartphones, as tabelas são reorganizadas em cartões para facilitar a leitura.
+
+As evidências de responsividade estão em:
+
+`docs/evidencias/etapa-03/`
 
 ## Tecnologias utilizadas
 
@@ -105,27 +116,10 @@ npm run dev
 
 Depois, acesse no navegador o endereço informado pelo Vite.
 
-## Estrutura do projeto
+## Como gerar a versão de produção
 
-```text
-StockFlow/
-├── README.md
-├── docs/
-│   ├── proposta.md
-│   └── etapa-02.md
-├── src/
-│   ├── components/
-│   │   ├── Footer.jsx
-│   │   └── Header.jsx
-│   ├── pages/
-│   │   ├── Dashboard.jsx
-│   │   ├── Movimentacoes.jsx
-│   │   └── Produtos.jsx
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── styles.css
-├── index.html
-└── package.json
+```bash
+npm run build
 ```
 
 ## Limitações atuais
@@ -143,6 +137,7 @@ Esses itens serão implementados conforme a evolução das próximas etapas da d
 
 - Etapa 01: proposta e especificação inicial.
 - Etapa 02: protótipo estrutural com HTML semântico.
+- Etapa 03: interface responsiva com CSS.
 
 ## Autor
 

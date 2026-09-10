@@ -65,7 +65,7 @@ function Movimentacoes() {
       <section aria-labelledby="historico-title">
         <h3 id="historico-title">Últimas movimentações</h3>
 
-        <div className="table-wrapper">
+        <div className="table-wrapper responsive-table">
           <table>
             <caption>Movimentações recentes do estoque</caption>
             <thead>
@@ -79,10 +79,10 @@ function Movimentacoes() {
             <tbody>
               {movimentacoes.map((movimentacao) => (
                 <tr key={movimentacao.id}>
-                  <td>{movimentacao.data}</td>
-                  <td>{movimentacao.produto}</td>
-                  <td>{movimentacao.tipo}</td>
-                  <td>{movimentacao.quantidade}</td>
+                  <td data-label="Data">{movimentacao.data}</td>
+                  <td data-label="Produto">{movimentacao.produto}</td>
+                  <td data-label="Tipo">{movimentacao.tipo}</td>
+                  <td data-label="Quantidade">{movimentacao.quantidade}</td>
                 </tr>
               ))}
             </tbody>
